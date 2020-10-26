@@ -31,5 +31,5 @@ Usage: python3 ./dlink-dec.py -i <in> -o <out> -m enc
 As always there is also an alternative way using `openssl`:
 
 ```bash
-openssl aes-128-cbc -d -p -nopad -nosalt -K "c05fbf1936c99429ce2a0781f08d6ad8" -iv "67c6697351ff4aec29cdbaabf2fbe346" --nosalt -in enc.bin -out dec.bin
+dd if=enc.bin skip=1756 iflag=skip_bytes|openssl aes-128-cbc -d -p -nopad -nosalt -K "c05fbf1936c99429ce2a0781f08d6ad8" -iv "67c6697351ff4aec29cdbaabf2fbe346" --nosalt -in /dev/stdin -out dec.bin
 ```
