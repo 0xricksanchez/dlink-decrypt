@@ -1,4 +1,15 @@
 # dlink-decrypt
+
+## ⚠️**DISCLAIMER**⚠️
+
+The provided PoC works for the handful of devices that deploy this specific encrpytion scheme.   
+The reversing here was done for educational purposes.  
+If this PoC doesn't work for you and your encrypted firmware does not start with a 4-byte "SHRS" pattern that's expected.  
+Encryption schemes change over time.  
+
+
+## General
+
 This is the PoC code for my [blogpost series](https://0x00sec.org/t/breaking-the-d-link-dir3060-firmware-encryption-recon-part-1/21943) about breaking encrypted D-Link firmware samples for further analysis:
 
 * [part 1](https://0x00sec.org/t/breaking-the-d-link-dir3060-firmware-encryption-recon-part-1/21943)
