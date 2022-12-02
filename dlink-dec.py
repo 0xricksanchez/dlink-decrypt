@@ -134,7 +134,7 @@ class DcryptLink:
         self.data_len_dec_fw_no_padding = len(data)
 
         if self.data_len_dec_fw_no_padding % 16 != 0:
-            data += data + b"\x00" * (16 - self.data_len_dec_fw_no_padding % 16)
+            data += b"\x00" * (16 - self.data_len_dec_fw_no_padding % 16)
             self.data_len_dec_fw = len(data)
         else:
             self.data_len_dec_fw = self.data_len_dec_fw_no_padding
